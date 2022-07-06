@@ -48,5 +48,15 @@ return [
     }
     return $consumers;
   }),
-
+  'providers' => [],
+  'drivers' => [
+      'consul' => [
+          'uri' => env('CONSUL_URI', 'http://127.0.0.1:8500'),	//此处为自己的consul地址
+          'token' => '',
+          'check' => [
+              'deregister_critical_service_after' => '90m',
+              'interval' => '1s',
+          ],
+      ],
+  ],
 ];
