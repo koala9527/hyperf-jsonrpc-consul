@@ -2,6 +2,8 @@
 
 namespace App\JsonRpc;
 
+use Hyperf\RpcClient\AbstractServiceClient;
+
 interface AdminServiceInterface
 {
     /**

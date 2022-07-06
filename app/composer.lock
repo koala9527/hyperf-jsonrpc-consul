@@ -2760,13 +2760,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/hyperf/service-governance-consul/zipball/3f0514dd68dffbd0250edac433fa33e248dd4316",
                 "reference": "3f0514dd68dffbd0250edac433fa33e248dd4316",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "hyperf/consul": "~2.2.0",
@@ -8832,5 +8826,5 @@
         "php": ">=7.3"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
