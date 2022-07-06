@@ -19,7 +19,7 @@ return [
         // 这个消费者要从哪个服务中心获取节点信息，如不配置则不会从服务中心获取节点信息
         'registry' => [
           'protocol' => 'consul',
-          'address' => env('CONSUL_URL', 'http://127.0.0.1:8500'),
+          'address' => 'http://172.17.0.4:8500',
         ],
         // 配置项，会影响到 Packer 和 Transporter
         'options' => [

@@ -30,7 +30,7 @@ class IndexController extends AbstractController
         $msg = $this->app_service_interface->getTestMsg($user);
         return [
             'method' => $method,
-            'message' => "Hello {$user}.",
+            'message' => "Hello {$msg}.",
         ];
     }
 }
