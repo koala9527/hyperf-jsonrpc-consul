@@ -22,9 +22,13 @@ docker run -d  -it --name rpc-admin -v /D/CodeProject/PhpProject/RPCProject/admi
 ```
 composer config -g repo.packagist composer <https://mirrors.aliyun.com/composer>
 ```
+安装其他依赖
 
 ```
 composer require hyperf/consul
 composer require hyperf/service-governance
 composer require hyperf/service-governance-consul
 ```
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8496666e92ec4811897af824de2bceaa~tplv-k3u1fbpfcp-watermark.image?)
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4eff50cfd95e4d8ca03ab3b0b233af9f~tplv-k3u1fbpfcp-watermark.image?)
