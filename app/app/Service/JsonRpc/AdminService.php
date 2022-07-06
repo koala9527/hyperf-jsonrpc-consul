@@ -12,7 +12,7 @@ use Hyperf\RpcServer\Annotation\RpcService;
  */
 class AdminService 
 {
-    public function makeMsg(string $msg)
+    public function getTestMsg(string $msg)
     {
         return 'from_app_rpc:'.$msg;
     }

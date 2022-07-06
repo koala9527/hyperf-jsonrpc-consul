@@ -13,7 +13,7 @@ return [
             'name' => 'http',
             'type' => Server::SERVER_HTTP,
             'host' => '0.0.0.0',
-            'port' => 9501,
+            'port' => 9601,
             'sock_type' => SWOOLE_SOCK_TCP,
             'callbacks' => [
                 Event::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
@@ -23,7 +23,7 @@ return [
             'name' => 'jsonrpc',
             'type' => Server::SERVER_BASE,
             'host' => '0.0.0.0',
-            'port' => 9502,
+            'port' => 9602,
             'sock_type' => SWOOLE_SOCK_TCP,
             'callbacks' => [
                 Event::ON_RECEIVE => [\Hyperf\JsonRpc\TcpServer::class, 'onReceive'],

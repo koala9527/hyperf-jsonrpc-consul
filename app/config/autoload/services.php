@@ -1,12 +1,11 @@
 <?php
 
-use App\JsonRpc\AdminServiceInterface;
 
 return [
     'consumers' => value(function () {
         $consumers = [];
         $services = [
-            'AdminService' => AdminServiceInterface::class
+            'AdminAppService' => App\JsonRpc\AdminServiceInterface::class
         ];
         foreach ($services as $name => $interface) {
             $protocol = 'jsonrpc';
