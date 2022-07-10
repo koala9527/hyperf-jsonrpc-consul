@@ -2,6 +2,8 @@
 
 Win10 docker环境下  hyperf 容器间使用consul注册中心进行 JSONRPC调用例子
 
+新增了Hyperf 通过RPC 调用golang Gin框架的例子
+
 # 先创建一个consul容器
 ```
 docker run -d --name=consul -p 8500:8500 -e CONSUL_BIND_INTERFACE=eth0 consul
