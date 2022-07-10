@@ -13,6 +13,7 @@ namespace App\Controller;
 
 use Hyperf\Di\Annotation\Inject;
 use  App\JsonRpc\AppServiceInterface;
+use  App\JsonRpc\GolangServiceInterface;
 
 class IndexController extends AbstractController
 {
@@ -23,11 +24,29 @@ class IndexController extends AbstractController
      */
     protected $app_service_interface;
 
+    /**
+     * 前台服务
+     * @Inject 
+     * @var GolangServiceInterface
+     */
+    protected $golang_service_interface;
+
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
         $msg = $this->app_service_interface->getTestMsg($user);
+        return [
+            'method' => $method,
+            'message' => "Hello {$msg}.",
+        ];
+    }
+
+    public function golang()
+    {
+        $user = $this->request->input('msg', 'Hyperf');
+        $method = $this->request->getMethod();
+        $msg = $this->golang_service_interface->getMsg($user);
         return [
             'method' => $method,
             'message' => "Hello {$msg}.",

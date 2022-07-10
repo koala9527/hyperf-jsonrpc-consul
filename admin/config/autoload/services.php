@@ -4,9 +4,13 @@ return [
     $consumers = [];
     $services = [
       'AppAdminService' => App\JsonRpc\AppServiceInterface::class,
+      'GolangApiService' => App\JsonRpc\GolangServiceInterface::class,
     ];
     foreach ($services as $name => $interface) {
       $protocol = 'jsonrpc';
+      if ($name == 'GolangApiService') {
+        $protocol = 'jsonrpc-http';
+    }
       $consumers[] = [
         // name 需与服务提供者的 name 属性相同
         'name' => $name,
