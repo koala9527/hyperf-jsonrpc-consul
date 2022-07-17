@@ -2,7 +2,7 @@
 
 namespace App\JsonRpc;
 
-interface GolangServiceInterface
+interface PythonServiceInterface
 {
     /**
      * @param string $msg 测试消息

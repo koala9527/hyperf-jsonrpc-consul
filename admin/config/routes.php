@@ -13,6 +13,7 @@ use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
 Router::addRoute(['GET', 'POST', 'HEAD'], '/golang', 'App\Controller\IndexController@golang');
+Router::addRoute(['GET', 'POST', 'HEAD'], '/python', 'App\Controller\IndexController@python');
 
 Router::get('/favicon.ico', function () {
     return '';
