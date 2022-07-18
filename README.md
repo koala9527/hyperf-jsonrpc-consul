@@ -3,6 +3,7 @@
 Win10 docker环境下  php hyperf 容器间使用consul注册中心进行 JSONRPC调用例子
 
 新增了Hyperf 通过RPC 调用golang Gin框架的例子
+新增了Hyperf 通过RPC 调用Python Flask框架的例子
 
 # 先创建一个consul容器
 ```
@@ -32,7 +33,7 @@ composer require hyperf/service-governance
 composer require hyperf/service-governance-consul
 ```
 
-## goalng gin 框架启动
+## golang gin 框架启动
 ```
 go mod tidy
 go run main.go
