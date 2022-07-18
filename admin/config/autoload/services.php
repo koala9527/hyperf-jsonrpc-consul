@@ -9,7 +9,7 @@ return [
         ];
         foreach ($services as $name => $interface) {
             $protocol = 'jsonrpc';
-            if ($name == 'GolangApiService') {
+            if ($name == 'GolangApiService' || $name == 'PythonApiService') {
                 $protocol = 'jsonrpc-http';
             }
             $consumers[] = [
