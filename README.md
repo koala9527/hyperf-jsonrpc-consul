@@ -45,3 +45,9 @@ go run main.go
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4eff50cfd95e4d8ca03ab3b0b233af9f~tplv-k3u1fbpfcp-watermark.image?)
 ### admin->gin-api
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46203a7a2a2d4e28bbd6a578a40681c9~tplv-k3u1fbpfcp-watermark.image?)
+
+使用教程：
+
+[使用consul注册中心，Hyperf框架之间进行RPC互相调用](https://juejin.cn/post/7125274400676380709)
+
+[继续使用consul注册中心，Hyperf框架与Gin之间进行RPC调用](https://juejin.cn/post/7125647647221743653)
