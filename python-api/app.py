@@ -1,12 +1,15 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify, Response
 import socket
+import json
 import consul
+from flask_jsonrpc import JSONRPC
+from jsonrpcserver import method, Result, Success, dispatch
 
 PORT = 8000
 CONSUL_PORT = 8500
 HOST = '127.0.0.1'
 
-app = Flask(__name__)
+app = Flask("application")
 
 # 注册服务到 Consul
 def register_service():
@@ -35,16 +38,32 @@ def health():
     response = {
         "jsonrpc": "2.0",
     }
-    return jsonify(response), 200
+    return jsonify(response)
 
+# jsonrpc = JSONRPC(app, '/')
 @app.route('/', methods=['POST'])
-def index():
-    response = {
-        "jsonrpc": "2.0",
-    }
-    return jsonify(response), 200
+# @jsonrpc.method(validate=False)
+def getMsg():
+    print(request.json)
+    res = {
+    "jsonrpc": "2.0",
+    "id": "61025bc35e07d",
+    "error": {
+        "code": -32000,
+        "message": "user not found",
+        "data": {
+            "class": "RuntimeException",
+            "code": 0,
+            "message": "user not found"
+        }
+    },
+    "context": []
+}
+    return Response(
+        dispatch(res), content_type="application/json"
+    )
 
-
+# {'jsonrpc': '2.0', 'method': '/python_api/getMsg', 'params': ['Im admin'], 'id': '63e798b5306fb', 'context': []}
 if __name__ == '__main__':
     register_service()
     app.run(host='0.0.0.0', port=PORT, debug=True)
