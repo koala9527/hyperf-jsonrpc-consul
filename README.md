@@ -40,6 +40,12 @@ composer require hyperf/service-governance-consul
 go mod tidy
 go run main.go
 ```
+## python flask 框架启动
+```
+pip install -r ./requirements.txt 
+python app.py
+```
+
 ## 效果
 
 ### Consul
